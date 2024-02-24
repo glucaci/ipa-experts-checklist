@@ -10,15 +10,19 @@
   },
 
   // Set *default* container specific settings.json values on container create.
-  "settings": {},
-
-  // Add the IDs of extensions you want installed when the container is created.
-  "extensions": [
-    "james-yu.latex-workshop",
-    "valentjn.vscode-ltex",
-    "be5invis.toml",
-    "yzhang.markdown-all-in-one"
-  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "james-yu.latex-workshop",
+        "valentjn.vscode-ltex",
+        "be5invis.toml",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  }
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],

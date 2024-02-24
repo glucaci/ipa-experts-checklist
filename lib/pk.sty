@@ -98,6 +98,19 @@ innertopmargin=\topskip,
 \newenvironment{taskitem}[1]%
 {\newcommand{\taskitemtitle}{#1}\begin{taskitemframe}[#1\hfill \donecheckbox{\taskitemtitle}]}
 {\\\commenttextfield{\taskitemtitle}\end{taskitemframe}}
+
+\newenvironment{taskitemsmall}[1]%
+{\newcommand{\taskitemtitle}{#1}\begin{taskitemframe}[#1\hfill \donecheckbox{\taskitemtitle}]}
+{\\\TextField[name=\taskitemtitle_comment,charsize=0pt,multiline=true,width=\textwidth,height=75pt]{}\end{taskitemframe}}
+
+\newenvironment{taskitemlarge}[1]%
+{\newcommand{\taskitemtitle}{#1}\begin{taskitemframe}[#1\hfill \donecheckbox{\taskitemtitle}]}
+{\\\TextField[name=\taskitemtitle_comment,charsize=0pt,multiline=true,width=\textwidth,height=155pt]{}\end{taskitemframe}}
+
+\newenvironment{taskitemdoublelarge}[1]%
+{\newcommand{\taskitemtitle}{#1}\begin{taskitemframe}[#1\hfill \donecheckbox{\taskitemtitle}]}
+{\\\TextField[name=\taskitemtitle_comment,charsize=0pt,multiline=true,width=\textwidth,height=195pt]{}\end{taskitemframe}}
+
 \newenvironment{taskitemwithoutcomment}[1]%
 {\newcommand{\taskitemtitle}{#1}\begin{taskitemframe}[#1\hfill \donecheckbox{\taskitemtitle}]}
 {\end{taskitemframe}}
